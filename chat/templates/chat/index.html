@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinora Chat System</title>
+    {% load static %}
+    <link href="{% static 'chat/css/styles.css' %}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-5">Sentinora Chat System</h1>
+
+        <!-- Existing Chat System UI -->
+        <div class="card">
+            <div class="card-body">
+                <textarea id="message" class="form-control mb-3" rows="3" placeholder="Type your message..."></textarea>
+                <button id="send" class="btn btn-primary btn-block">Send</button>
+            </div>
+        </div>
+
+        <div id="response-container" class="mt-4">
+            <h4>Response:</h4>
+            <p id="response" class="alert alert-info">No messages yet</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{% static 'chat/js/chat.js' %}"></script>
+    <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+
+</body>
+</html>
